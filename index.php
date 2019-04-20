@@ -1,1 +1,1 @@
-<?php include_once("volcano.html")  ?>
+<?php header('Location: volcano.html') ;  ?>
