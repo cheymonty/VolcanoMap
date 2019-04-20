@@ -38,29 +38,55 @@ function draw() {
     const pix = myMap.latLngToPixel(lat,lon);
 
     let PEI = Number(row.get('PEI'));
-    let diameter = 9 * sqrt(PEI) * myMap.zoom();
+    let diameter =  9 * sqrt(PEI) * myMap.zoom();
 
     let volcanoName = row.get('V_Name');
 
 
     strokeWeight(1);
     stroke(255,255,255);
-    if (PEI===1){
-      fill(254, 254, 105, 100);
-    }else if (PEI===2){
-      fill(169, 243, 106, 100);
-    }else if (PEI===3){
-      fill(87, 232, 107, 100);
-    }else if(PEI===4){
-      fill(250,128,114,100);
-    }else if(PEI===5){
-      fill(220, 20, 60, 100);
-    }else if(PEI===6){
-      fill(225, 0, 0, 100);
+
+    switch(PEI){
+      case 1:
+        fill(254, 254, 105, 100); //yellow
+        break;
+      case 2:
+        fill(169, 243, 106, 100);
+        break;
+      case 3:
+        fill(87, 232, 107, 100);
+        break;
+      case 4:
+        fill(250,128,114,100);
+        break;
+      case 5:
+        fill(255,165,0,100); //orange
+        break;
+      case 6:
+        fill(220, 20, 60, 150);
+        break;
+      case 7:
+        fill(225, 0, 0,150); //red
+        break;
     }
 
-    ellipse(pix.x, pix.y, diameter, diameter);
+    // if (PEI===1){ //yellow
+    //   fill(254, 254, 105, 100);
+    // }else if (PEI===2){
+    //   fill(169, 243, 106, 100);
+    // }else if (PEI===3){
+    //   fill(87, 232, 107, 100);
+    // }else if(PEI===4){
+    //   fill(250,128,114,100);
+    // }else if(PEI===5){
+    //   fill(255,165,0,100); //orange
+    // }else if(PEI===6){
+    //   fill(220, 20, 60, 150);
+    // }else if(PEI===7){
+    //   fill(225, 0, 0,150); //red
+    // }
 
+    ellipse(pix.x, pix.y, diameter, diameter);
 
   }
 }
