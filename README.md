@@ -6,3 +6,11 @@ I also plan on implementing a feature that allows the user to click a circle whi
 The size of the circles are based of each volcano's PEI (Population Exposure Index)
 
 The colors range from yellow (PEI==1) to red (PEI==8)
+
+
+Implements:
+  Javascript |
+  p5.js |
+  Mappa (p5.js library) |
+  HTML/CSS
+  
